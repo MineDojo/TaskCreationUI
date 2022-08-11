@@ -1,0 +1,21 @@
+<View>
+  <Header value="Prompts Labeling"/>
+  <HyperText name="video" value="$video_url"/>
+  <TextArea name="transcription" toName="video" rows="2" editable="true"/>
+  <Header value="Start/End Timestamp"/>
+  <View style="display: grid;  grid-template-columns: 0.12fr 0.12fr 0.12fr; max-height: 300px; width: 400px">
+    <TextArea name="table_h_1" toName="video" placeholder="h" editable="true" maxSubmissions="1"/>
+    <TextArea name="table_min_1" toName="video" placeholder="min" editable="true" maxSubmissions="1"/>
+    <TextArea name="table_sec_1" toName="video" placeholder="sec" editable="true" maxSubmissions="1"/>
+    <TextArea name="table_h_2" toName="video" placeholder="h" editable="true" maxSubmissions="1"/>
+    <TextArea name="table_min_2" toName="video" placeholder="min" editable="true" maxSubmissions="1"/>
+    <TextArea name="table_sec_2" toName="video" placeholder="sec" editable="true" maxSubmissions="1"/>
+  </View>
+  <Choices name="type" toName="video" choice="single-radio">
+    <Choice value="Fine-grained"/>
+    <Choice value="Coarse"/>
+    <Choice value="Invalid"/>
+  </Choices>
+</View><!--{
+ "video_url": "<embed width='560' height='315' src='https://www.youtube.com/embed/xvwC1xMZhBs'>"
+}-->
